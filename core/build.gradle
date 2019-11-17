@@ -1,0 +1,90 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def rootAndroidId = rootProject.ext.android
+def androidX = rootProject.ext.androidX
+def support = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion rootAndroidId.compileSdkVersion
+    buildToolsVersion rootAndroidId.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootAndroidId.minSdkVersion
+        targetSdkVersion rootAndroidId.targetSdkVersion
+        versionCode rootAndroidId.versionCode
+        versionName rootAndroidId.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation androidX.appcompat
+    implementation androidX.corektx
+    implementation androidX.constraintlayout
+    implementation androidX.cardview
+    implementation androidX.material
+    implementation androidX.recyclerview
+    //rxjava
+    api support.rxjava
+    api support.rxandroid
+    //rx管理View的生命周期
+    api(support["rxlifecycle"]) {
+        exclude group: 'com.android.support'
+    }
+    api(support["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    //rxbinding
+    api(support.rxbinding) {
+        exclude group: 'com.android.support'
+    }
+    //rx权限请求
+//    api(support.rxpermissions) {
+//        exclude group: 'com.android.support'
+//    }
+    //network
+    api support.okhttp
+    api support["logging-interceptor"]
+    api support.retrofit
+    api support["converter-gson"]
+    api support["adapter-rxjava"]
+    //json解析
+    api support.gson
+    //material-dialogs
+    api(support["material-dialogs-core"]) {
+        exclude group: 'com.android.support'
+    }
+    api(support["material-dialogs-commons"]) {
+        exclude group: 'com.android.support'
+    }
+    //glide图片加载库
+    api (support.glide){
+        exclude group: 'com.android.support'
+    }
+    annotationProcessor support["glide-compiler"]
+    //recyclerview的databinding套装
+    api(support.bindingcollectionadapter) {
+        exclude group: 'com.android.support'
+    }
+    api(support["bindingcollectionadapter-recyclerview"]) {
+        exclude group: 'com.android.support'
+    }
+    //Google LiveData和ViewModel组件
+    api support["lifecycle-extensions"]
+    annotationProcessor support["lifecycle-compiler"]
+}
