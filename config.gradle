@@ -1,11 +1,11 @@
 ext {
     //android开发版本配置
     android = [
-            compileSdkVersion: 28,
-            buildToolsVersion: "29.0.1",
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.2",
             applicationId    : "com.shenkai.jetpackmvvm",
             minSdkVersion    : 21,
-            targetSdkVersion : 28,
+            targetSdkVersion : 29,
             versionCode      : 1,
             versionName      : "1.0",
     ]
@@ -30,21 +30,21 @@ ext {
     //依赖第三方配置
     dependencies = [
             //rxjava
-            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.3",
-            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.13",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.1",
             //rx系列与View生命周期同步
-            "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
-            "rxlifecycle-components"               : "com.trello.rxlifecycle2:rxlifecycle-components:2.2.2",
+            "rxlifecycle"                          : "com.trello.rxlifecycle3:rxlifecycle:3.1.0",
+            "rxlifecycle-components"               : "com.trello.rxlifecycle3:rxlifecycle-components:3.1.0",
             //rxbinding
-            "rxbinding"                            : "com.jakewharton.rxbinding2:rxbinding:2.1.1",
+            "rxbinding"                            : "com.jakewharton.rxbinding3:rxbinding:3.0.0",
             //rx 6.0权限请求
             "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
             //network
-            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
+//            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.12.0",
             "logging-interceptor"                  : "com.squareup.okhttp3:logging-interceptor:3.10.0",
-            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
-            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
-            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.5.0",
+            "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.5.0",
+            "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.5.0",
             //glide图片加载
             "glide"                                : "com.github.bumptech.glide:glide:4.8.0",
             "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.8.0",
@@ -53,9 +53,6 @@ ext {
             //material-dialogs
             "material-dialogs-core"                : "com.afollestad.material-dialogs:core:0.9.4.5",
             "material-dialogs-commons"             : "com.afollestad.material-dialogs:commons:0.9.4.5",
-            //recyclerview的databinding套装
-            "bindingcollectionadapter"             : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
-            "bindingcollectionadapter-recyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
             //Google AAC (Architecture Components)
             "lifecycle-extensions"                 : "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion",
             "lifecycle-compiler"                   : "androidx.lifecycle:lifecycle-compiler:$archLifecycleVersion"

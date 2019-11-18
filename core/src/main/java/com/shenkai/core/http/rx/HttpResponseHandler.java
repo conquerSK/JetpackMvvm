@@ -3,6 +3,7 @@ package com.shenkai.core.http.rx;
 import com.shenkai.core.http.bean.BaseBean;
 import com.shenkai.core.http.exception.ApiException;
 import com.shenkai.core.http.exception.ExceptionHandle;
+import com.trello.rxlifecycle3.RxLifecycle;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;

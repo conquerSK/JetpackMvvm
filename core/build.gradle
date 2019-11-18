@@ -58,7 +58,7 @@ dependencies {
 //        exclude group: 'com.android.support'
 //    }
     //network
-    api support.okhttp
+//    api support.okhttp//Retrofit库已经包含okhttp
     api support["logging-interceptor"]
     api support.retrofit
     api support["converter-gson"]
@@ -77,13 +77,6 @@ dependencies {
         exclude group: 'com.android.support'
     }
     annotationProcessor support["glide-compiler"]
-    //recyclerview的databinding套装
-    api(support.bindingcollectionadapter) {
-        exclude group: 'com.android.support'
-    }
-    api(support["bindingcollectionadapter-recyclerview"]) {
-        exclude group: 'com.android.support'
-    }
     //Google LiveData和ViewModel组件
     api support["lifecycle-extensions"]
     annotationProcessor support["lifecycle-compiler"]

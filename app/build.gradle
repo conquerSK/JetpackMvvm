@@ -38,5 +38,4 @@ dependencies {
     implementation androidX.constraintlayout
     implementation project(path: ':core')
 
-
 }
