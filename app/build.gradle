@@ -37,5 +37,6 @@ dependencies {
     implementation androidX.corektx
     implementation androidX.constraintlayout
     implementation project(path: ':core')
+    implementation project(path: ':network')
 
 }

@@ -12,6 +12,8 @@ import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 
 import java.util.Map;
 
+import retrofit2.Retrofit;
+
 
 public abstract class BaseActivity<VM extends BaseViewModel> extends RxAppCompatActivity implements IBaseView {
     protected VM viewModel;
